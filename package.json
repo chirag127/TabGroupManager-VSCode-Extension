@@ -3,13 +3,18 @@
   "displayName": "Tab Group Saver",
   "description": "Save, restore, and manage groups of open tabs in VS Code",
   "version": "0.0.1",
-  "publisher": "chirag127",
+  "publisher": "ChiragSinghal",
   "author": {
     "name": "Chirag Singhal"
   },
-  "engines": {
-    "vscode": "^1.70.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chirag127/tab-group-saver"
   },
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "icon": "resources/icon.png",
   "categories": [
     "Other"
   ],

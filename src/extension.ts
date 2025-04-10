@@ -15,9 +15,11 @@ export function activate(context: vscode.ExtensionContext) {
     // Initialize services
     const tabGroupService = new TabGroupService(context);
 
+    // Create tree data provider
+    const treeDataProvider = new TabGroupTreeDataProvider(tabGroupService);
+
     // Register tree view
     const treeView = registerTabGroupTreeView(context, tabGroupService);
-    const treeDataProvider = treeView.dataProvider as TabGroupTreeDataProvider;
 
     // Register commands
     registerCommands(context, tabGroupService, treeDataProvider);
@@ -32,14 +34,9 @@ export function activate(context: vscode.ExtensionContext) {
  * This method is called when the extension is deactivated
  */
 export function deactivate() {
-    // Auto-save current tabs if enabled
-    const tabGroupService = new TabGroupService({
-        globalState: { get: () => undefined, update: async () => undefined },
-        workspaceState: { get: () => undefined, update: async () => undefined },
-        subscriptions: [],
-    } as vscode.ExtensionContext);
+    // We can't create a full extension context here, so we'll just log a message
+    console.log("Tab Group Saver extension is being deactivated");
 
-    tabGroupService.autoSaveCurrentTabs().catch((error) => {
-        console.error("Error auto-saving current tabs:", error);
-    });
+    // Note: Auto-save functionality is handled in the extension.ts activate method
+    // by registering a workspace.onDidCloseTextDocument event listener
 }
