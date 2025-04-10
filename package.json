@@ -1,0 +1,136 @@
+{
+  "name": "tab-group-saver",
+  "displayName": "Tab Group Saver",
+  "description": "Save, restore, and manage groups of open tabs in VS Code",
+  "version": "0.0.1",
+  "publisher": "chirag127",
+  "author": {
+    "name": "Chirag Singhal"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "tabs",
+    "groups",
+    "session",
+    "save",
+    "restore"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tab-group-saver.saveTabGroup",
+        "title": "Tab Group Saver: Save Current Tabs as Group"
+      },
+      {
+        "command": "tab-group-saver.loadTabGroup",
+        "title": "Tab Group Saver: Load Tab Group"
+      },
+      {
+        "command": "tab-group-saver.deleteTabGroup",
+        "title": "Tab Group Saver: Delete Tab Group"
+      },
+      {
+        "command": "tab-group-saver.renameTabGroup",
+        "title": "Tab Group Saver: Rename Tab Group"
+      },
+      {
+        "command": "tab-group-saver.setDefaultTabGroup",
+        "title": "Tab Group Saver: Set as Default Tab Group"
+      },
+      {
+        "command": "tab-group-saver.openSettings",
+        "title": "Tab Group Saver: Open Settings"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "tab-group-saver",
+          "title": "Tab Group Saver",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "tab-group-saver": [
+        {
+          "id": "tabGroupsExplorer",
+          "name": "Tab Groups"
+        }
+      ]
+    },
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "tab-group-saver.loadTabGroup",
+          "when": "view == tabGroupsExplorer && viewItem == tabGroup",
+          "group": "inline"
+        },
+        {
+          "command": "tab-group-saver.renameTabGroup",
+          "when": "view == tabGroupsExplorer && viewItem == tabGroup"
+        },
+        {
+          "command": "tab-group-saver.deleteTabGroup",
+          "when": "view == tabGroupsExplorer && viewItem == tabGroup"
+        },
+        {
+          "command": "tab-group-saver.setDefaultTabGroup",
+          "when": "view == tabGroupsExplorer && viewItem == tabGroup"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "tab-group-saver.saveTabGroup",
+          "when": "view == tabGroupsExplorer"
+        },
+        {
+          "command": "tab-group-saver.openSettings",
+          "when": "view == tabGroupsExplorer"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "tab-group-saver.saveTabGroup",
+        "key": "ctrl+shift+s",
+        "mac": "cmd+shift+s",
+        "when": "editorFocus"
+      },
+      {
+        "command": "tab-group-saver.loadTabGroup",
+        "key": "ctrl+shift+l",
+        "mac": "cmd+shift+l",
+        "when": "editorFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
