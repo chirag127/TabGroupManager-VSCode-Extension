@@ -1,29 +1,28 @@
-# Node.js
+# Apex .gitignore for VS Code Extension (TypeScript)
+
+# Node.js and TypeScript
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-
-# TypeScript / JavaScript compilation output
-out/
-dist/
-
-# VS Code Extension specific
-.vscode-test/
-.vscode-test-web/
-*.vsix
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Logs
 *.log
+*.tmp
+*.tmp
 
-# OS-specific files
-.DS_Store
-Thumbs.db
+# IDE
+.vscode/
 
-# Editor specific
-.vscode/*.code-workspace
+# Build and compile
+/dist
+/build
+/out
+
+# Misc
+*.env
+*.env.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor
+*.vscode/
+!.vscode/settings.json
+!.vscode/launch.json
+
