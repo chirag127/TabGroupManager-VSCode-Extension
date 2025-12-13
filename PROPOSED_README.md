@@ -1,152 +1,96 @@
-<div align="center">
+![TabGroupSaver Banner](https://raw.githubusercontent.com/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension/main/assets/banner.png)
 
-# CodeSense: Tab Group Manager VS Code Extension
+[![Build Status](https://github.com/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square)](https://github.com/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension/actions)
+[![Coverage Status](https://codecov.io/gh/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension/branch/main/graph/badge.svg?style=flat-square)](https://codecov.io/gh/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension)
+[![Tech Stack](https://img.shields.io/badge/Tech-Typescript%20%7C%20VSCode%20Extension-blue?style=flat-square)]()
+[![Lint](https://img.shields.io/badge/Lint-Biome-success?style=flat-square)]()
+[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?style=flat-square)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension?style=flat-square)](https://github.com/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension/stargazers)
 
-<img src="https://raw.githubusercontent.com/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension/main/assets/codesense_logo.svg" alt="CodeSense Logo" width="150"/>
+⭐ **Star this repo** to stay updated on future releases!
 
-> **The ultimate session management solution for Visual Studio Code. Effortlessly save, name, restore, and organize your entire tab configurations across different projects, ensuring seamless context switching and zero friction.**
+## 📌 Quick Pitch
+TabGroupSaver empowers VS Code users to capture, restore, and organize groups of open tabs as named sessions, boosting workflow continuity across projects. Featuring auto‑save, default groups, and multi‑scope storage, it turns tab chaos into structured productivity.
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension/ci.yml?branch=main&style=flat-square&label=Build&logo=github)](https://github.com/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension/actions/workflows/ci.yml)
-[![Code Coverage](https://img.shields.io/codecov/c/github/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension?style=flat-square&token=YOUR_TOKEN_HERE&logo=codecov)](https://app.codecov.io/gh/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension)
-[![License](https://img.shields.io/github/license/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension?style=flat-square&label=License&logo=open-source-initiative)](LICENSE)
-[![Tech Stack](https://img.shields.io/badge/Stack-TypeScript%20%7C%20VSCode%20API-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Linter](https://img.shields.io/badge/Linter-Biome-000000?style=flat-square&logo=biome)](https://biomejs.dev/)
-[![GitHub Stars](https://img.shields.io/github/stars/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension?style=flat-square&logo=github)](https://github.com/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension/stargazers)
-
-#### 🚀 Star ⭐ this Repo!
-
-</div>
-
----
-
-## Table of Contents
-
-1.  [Overview](#overview)
-2.  [Features & Capabilities](#features--capabilities)
-3.  [Installation & Usage](#installation--usage)
-4.  [Architecture](#architecture)
-5.  [🤖 AI Agent Directives](#ai-agent-directives)
-6.  [Development Setup](#development-setup)
-7.  [License](#license)
-
----
-
-## Overview
-
-CodeSense addresses the core problem of context loss during complex development cycles. By managing tab groups (sessions), it allows developers to isolate tasks, switch seamlessly between projects, and maintain highly personalized workspace layouts. It features intelligent auto-save and robust storage mechanisms (global, workspace, or file-based) for maximum flexibility.
-
-This project is built using modern TypeScript and leverages the VS Code Extension API for deep integration and performance.
-
-## Features & Capabilities
-
-*   **Intelligent Auto-Save:** Automatically persists the current tab state on window close or idle time.
-*   **One-Click Restore:** Instantly load complex tab layouts using the Command Palette.
-*   **Flexible Storage:** Choose to save sessions globally (across all VS Code instances) or workspace-specific.
-*   **Custom Naming:** Assign clear, descriptive names to sessions for easy identification.
-*   **Session Explorer:** A dedicated sidebar view for managing, editing, and deleting saved sessions.
-*   **Conflict Resolution:** Handles cases where a session is restored into an already open workspace.
-
-## Installation & Usage
-
-### VS Code Marketplace
-
-1.  Open VS Code.
-2.  Navigate to the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
-3.  Search for **"CodeSense Tab Manager"**.
-4.  Click **Install**.
-
-### Key Commands
-
-| Command | Description | Shortcut (Configurable) |
-| :--- | :--- | :--- |
-| `codesense.saveCurrentSession` | Saves all open tabs in the current group. | `Ctrl+Alt+S` |
-| `codesense.restoreSession` | Prompts selection of a saved session to load. | `Ctrl+Alt+R` |
-| `codesense.openSessionExplorer` | Opens the dedicated sidebar management view. | N/A |
-
-## Architecture
-
-The extension adheres to an adapted Feature-Sliced Design (FSD) architecture, promoting high modularity and clear separation of concerns, especially between the VS Code API interactions and the core business logic.
+## 🏗️ Architecture Overview
+text
+TabGroupSaver/
+├─ src/
+│  ├─ commands/          # VS Code command implementations
+│  ├─ services/          # Session storage & retrieval logic
+│  ├─ utils/             # Helper utilities (debounce, serialization)
+│  └─ activation.ts      # Extension entry point
+├─ tests/
+│  ├─ unit/              # Vitest unit tests
+│  └─ integration/       # VS Code integration tests (Playwright)
+├─ .github/
+│  └─ workflows/ci.yml   # CI pipeline
+└─ package.json
 
 
-. (Root)
-├── src/
-│   ├── core/           (Core Services: VS Code API Wrapper, State Management, Storage)
-│   ├── commands/       (Command registration and handlers - Interface layer)
-│   ├── entities/       (Data Models: Session, TabGroup, FileReference)
-│   ├── features/       (Specific Logic Modules: AutoSave, RestoreFlow)
-│   └── extension.ts    (Extension entry point and initialization)
-├── package.json        (VS Code Extension Manifest)
-└── tsconfig.json
-
+## 📖 Table of Contents
+- [Quick Pitch](#-quick-pitch)
+- [Architecture Overview](#-architecture-overview)
+- [AI Agent Directives](#-ai-agent-directives)
+- [Development Standards](#-development-standards)
+- [Setup & Scripts](#-setup--scripts)
+- [Contribution Guidelines](#-contribution-guidelines)
 
 ## 🤖 AI Agent Directives
+<details open>
+<summary>Technical Blueprint & Automation Commands</summary>
 
-<details>
-<summary>🤖 AI AGENT DIRECTIVES & TECHNICAL MANIFEST (CodeSense)</summary>
+**Tech Stack Definition**
+- **Language:** TypeScript (strict mode)
+- **Runtime:** Node.js ≥18
+- **Extension API:** VS Code Extension Host
+- **Package Manager:** npm (via `package.json`)
+- **Lint/Format:** Biome (`biome.json`)
+- **Testing:** Vitest (unit) + Playwright (integration)
+- **CI/CD:** GitHub Actions (Ubuntu latest)
 
-### 1. IDENTITY & PRIME DIRECTIVE
-**Role:** Senior Principal Architect | Focus: Zero-Defect, High-Velocity, Future-Proof Extension Development.
-**Context:** VS Code Extension Development (TypeScript, 2026 Standards).
+**Architectural Patterns**
+- **SOLID**: Each service (e.g., `SessionService`) adheres to Single Responsibility.
+- **DRY**: Shared utilities live under `utils/`.
+- **Hexagonal** (Ports & Adapters) for storage backends (local file, workspace state).
 
-### 2. ARCHITECTURAL MANDATES
-*   **Architecture Pattern:** Apply **Feature-Sliced Design (FSD)** principles adapted for the VS Code extension environment.
-*   **Key Layers:** `src/entities` (Data Models), `src/core` (VS Code State/API interactions, Storage), `src/features` (Specific command logic: SaveSession, RestoreSession, UI), `src/shared` (Utilities).
-*   **VS Code API Usage:** Isolate all raw VS Code API calls within the `src/core` service layer to maintain testability and abstraction. Commands in `src/commands` should only dispatch events or call methods on the `CoreService`.
+**Verification Commands**
+bash
+# Install dependencies
+npm ci
 
-### 3. APEX TOOLCHAIN & STANDARDS
-*   **Language & Runtime:** TypeScript 5.x (Strict Mode: `noImplicitAny`, `strictNullChecks`). Target Node 18+ runtime environment for VS Code.
-*   **Linting & Formatting:** Use **Biome** for instantaneous feedback and strict adherence to codified style guides.
-    *   *Verification Command:* `npm run lint -- --check`
-*   **Testing Frameworks:** **Vitest** for unit testing core logic (isolated from VS Code API) and the dedicated **VS Code Extension Test Framework** for integration tests (running against a mock workspace).
-    *   *Verification Command:* `npm run test:unit` and `npm run test:integration`
-*   **Configuration Management:** All user settings and configuration options MUST be defined and documented clearly within `package.json`'s `contributes.configuration` section. Do not hardcode magic strings.
+# Lint & format check
+npm run lint
 
-### 4. SECURITY & STORAGE PROTOCOL
-*   **State Management:** Prioritize `vscode.workspace.globalState` or `workspaceState` for persistence based on scope. If sensitive data were involved (not applicable for tab names), `secretStorage` must be used.
-*   **Serialization:** Use robust JSON serialization with schema validation for saved session files to ensure backward compatibility and prevent corruption upon restore.
+# Run full test suite with coverage
+npm test -- --coverage
+
+# Verify build (VSIX package)
+pm run package
+
+These commands are invoked automatically by the CI workflow to ensure Zero‑Defect delivery.
 
 </details>
 
-## Development Setup
+## 🛠️ Development Standards
+| Script                | Description                                          |
+|-----------------------|------------------------------------------------------|
+| `npm ci`              | Clean install of exact dependencies                  |
+| `npm run lint`        | Run Biome linter and auto‑fix                        |
+| `npm test`            | Execute Vitest unit tests                            |
+| `npm run test:e2e`    | Run Playwright integration tests                     |
+| `npm run build`       | Compile TypeScript to JavaScript (`tsc`)            |
+| `npm run package`     | Package the extension into a `.vsix` file            |
 
-To contribute or debug the extension locally, follow these steps.
+**Core Principles**
+- **SOLID** – decouple features for extensibility.
+- **DRY** – utilities prevent duplication.
+- **YAGNI** – only implement needed session features.
+- **Continuous Validation** – CI runs on every PR.
 
-### Prerequisites
+## 🤝 Contribution Guidelines
+Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for code standards, pull‑request workflow, and how to report bugs.
 
-*   Node.js (LTS)
-*   VS Code
-*   `npm` or `pnpm` (pnpm preferred for dependency management)
+--- 
 
-### Setup Commands
-
-bash
-# 1. Clone the repository
-git clone https://github.com/chirag127/CodeSense-Tab-Group-Manager-VSCode-Extension
-cd CodeSense-Tab-Group-Manager-VSCode-Extension
-
-# 2. Install dependencies
-pnpm install
-
-# 3. Run the development environment (opens a new VS Code instance with the extension loaded)
-pnpm run watch
-
-# 4. Run tests and linting checks
-pnpm run lint
-pnpm run test
-
-
-### Key Scripts
-
-| Script | Description | Notes |
-| :--- | :--- | :--- |
-| `watch` | Compiles source files and automatically watches for changes. | Essential for local development |
-| `compile` | Runs the TypeScript compiler once. | For build/packaging |
-| `lint` | Executes Biome for formatting and linting checks. | High-velocity quality assurance |
-| `test` | Runs both unit and integration tests. | Requires Test Runner Extension in VS Code |
-| `vsce:package` | Creates the VSIX package for distribution. | Requires VSCE utility installed |
-
-## License
-
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** License.
-
-See the [LICENSE](LICENSE) file for details.
+© 2025 chirag127 – Licensed under **CC BY‑NC 4.0**.
