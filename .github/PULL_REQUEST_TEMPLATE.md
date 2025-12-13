@@ -1,59 +1,38 @@
-# Pull Request for TabGroupManager-VSCode-Extension
+# Pull Request Template for TabGroupSaver-Session-Manager-VSCode-Extension
 
-## Context
+## Description of Changes
+Please provide a brief description of the changes made in this pull request. This should include any new features, bug fixes, or improvements to existing code.
 
-*   **Author:** @`pull_request.user.login`
-*   **Branch:** `pull_request.head.ref`
-*   **Base Branch:** `pull_request.base.ref`
-*   **Date:** December 2025
+* **Changes:**
 
-## 🚀 Feature / 🐛 Bug Fix
+## Related Issues
+If this pull request fixes or addresses any issues, please list them below.
 
-*   **Type:** (Please select one: `Feature`, `Bug Fix`, `Refactor`, `Docs`, `Chore`)
-*   **Related Issue:** (If applicable, link to an issue, e.g., `#123`)
+* **Issues:**
 
-## 🎯 Description
+## Checklist
+Before submitting this pull request, please ensure that you have completed the following steps:
 
-Provide a concise and clear summary of the changes introduced in this pull request. Explain the problem addressed or the new functionality implemented.
+* [ ] I have updated the README.md to reflect any changes.
+* [ ] I have added tests for any new functionality.
+* [ ] I have checked for any formatting or linting issues.
+* [ ] I have verified that the code works as expected.
 
-## 💡 Motivation
+## Additional Context
+If there is any additional context or information that would be helpful for reviewers to know, please include it below.
 
-Why are these changes necessary? What problem does this solve or what enhancement does it provide?
+* **Context:**
 
-## 🛠️ Changes
+## Screenshots or Videos (Optional)
+If your changes include any visual updates or new features, please include screenshots or videos to demonstrate the changes.
 
-List the key changes made. This could include:
+* **Screenshots/Videos:**
 
-*   New features implemented.
-*   Bugs fixed.
-*   Refactoring performed.
-*   Documentation updates.
-*   Dependencies updated.
+## Verification Commands
+To verify the changes made in this pull request, please run the following commands:
 
-## 🔬 Testing Performed
+* `npm run test`
+* `npm run lint`
+* `npm run build`
 
-Describe the testing conducted to ensure the quality and correctness of the changes.
-
-*   **Unit Tests:** (e.g., `pytest` executed, tests passed)
-*   **Integration Tests:** (e.g., specific scenarios validated)
-*   **Manual Testing:** (e.g., steps taken to verify functionality in VS Code)
-
-## ✅ Checklist
-
-Please ensure all the following points are addressed:
-
-*   [ ] My code adheres to the project's coding standards and architectural guidelines.
-*   [ ] I have performed a self-review of my own code.
-*   [ ] My changes generate no new linting or formatting warnings (using Ruff).
-*   [ ] I have added new tests that prove my fix is effective or that my feature works.
-*   [ ] All new and existing unit tests pass locally with my changes.
-*   [ ] My changes do not introduce breaking API changes or I have documented them clearly.
-*   [ ] I have updated the relevant documentation (if applicable).
-
-## 🌟 Additional Information
-
-Any other context, screenshots, or relevant information that might help reviewers understand the changes.
-
----
-
-*This template adheres to the Apex Technical Authority standards, ensuring clarity, maintainability, and professional archival for the `TabGroupManager-VSCode-Extension` repository.*
+By submitting this pull request, I confirm that I have followed the guidelines outlined in the [CONTRIBUTING.md](https://github.com/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension/blob/main/CONTRIBUTING.md) file and that my code adheres to the standards and best practices outlined in the [AGENTS.md](https://github.com/chirag127/TabGroupSaver-Session-Manager-VSCode-Extension/blob/main/AGENTS.md) file.
