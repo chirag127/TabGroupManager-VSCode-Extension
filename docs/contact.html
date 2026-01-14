@@ -1,0 +1,130 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Tab Group Saver</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config for glassmorphism (optional) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            glass: 'rgba(255,255,255,0.1)',
+          },
+          backdropBlur: {
+            xs: '2px',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar for a sleek look */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #4b5563;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-gray-100 flex flex-col">
+
+  <!-- Header -->
+  <header class="py-6 text-center">
+    <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-pink-300">
+      Contact
+    </h1>
+    <p class="mt-2 text-lg text-gray-300">Get in touch with the creator of Tab Group Saver</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex items-center justify-center px-4">
+    <section class="w-full max-w-lg bg-glass backdrop-blur-xs rounded-2xl p-8 shadow-xl border border-white/20">
+      <div class="flex flex-col items-center space-y-6">
+
+        <!-- Avatar / Icon -->
+        <div class="w-24 h-24 rounded-full bg-white/20 flex items-center justify-center text-3xl font-bold text-white">
+          CS
+        </div>
+
+        <!-- Name & Role -->
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold text-white">Chirag Singhal</h2>
+          <p class="text-sm text-gray-300 mt-1">Software Engineer • Backend &amp; GenAI Specialist</p>
+          <p class="text-sm text-gray-400 mt-1">Bhubaneswar, Odisha, India</p>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="w-full space-y-3">
+          <a href="mailto:chiragsinghal127@gmail.com"
+             class="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 .5v15l8-7.5L20 19.5v-15H4z"/>
+            </svg>
+            <span>chiragsinghal127@gmail.com</span>
+          </a>
+
+          <a href="https://github.com/chirag127"
+             target="_blank"
+             class="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.94.58.11.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.2.7-3.88-1.55-3.88-1.55-.53-1.35-1.29-1.71-1.29-1.71-1.06-.73.08-.71.08-.71 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.73 1.26 3.4.96.1-.75.41-1.26.75-1.55-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.51.11-3.15 0 0 .98-.31 3.21 1.18a11.2 11.2 0 012.92-.39c.99.01 2 .13 2.92.39 2.23-1.5 3.2-1.18 3.2-1.18.64 1.64.24 2.85.12 3.15.75.81 1.2 1.84 1.2 3.1 0 4.44-2.69 5.42-5.25 5.71.42.36.8 1.08.8 2.18 0 1.58-.01 2.86-.01 3.24 0 .31.21.68.8.56C20.71 21.4 24 17.09 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+            </svg>
+            <span>GitHub – chirag127</span>
+          </a>
+
+          <a href="https://linkedin.com/in/chirag-singhal1"
+             target="_blank"
+             class="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 0-1.75-.785-1.75-1.752s.784-1.752 1.75-1.752 1.75.785 1.75 1.752-.784 1.752-1.75 1.752zm13.5 10.268h-3v-4.5c0-1.074-.021-2.455-1.496-2.455-1.496 0-1.727 1.166-1.727 2.376v4.579h-3v-9h2.881v1.229h.04c.401-.761 1.381-1.562 2.842-1.562 3.041 0 3.603 2.001 3.603 4.603v4.73z"/>
+            </svg>
+            <span>LinkedIn – chirag-singhal1</span>
+          </a>
+
+          <a href="https://buymeacoffee.com/WhyIsWhen"
+             target="_blank"
+             class="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2c5.522 0 10 4.477 10 10s-4.478 10-10 10c-1.658 0-3.22-.414-4.581-1.14l-5.68 1.47 1.447-5.58c-.757-1.382-1.186-2.967-1.186-4.65C2 6.477 6.478 2 12 2zm0 2C7.589 4 4 7.589 4 12c0 1.36.317 2.645.877 3.791l-.724 2.787 2.787-.724c1.146.56 2.431.877 3.791.877 4.411 0 8-3.589 8-8s-3.589-8-8-8z"/>
+            </svg>
+            <span>Buy Me a Coffee</span>
+          </a>
+        </div>
+
+        <!-- Optional Contact Form (non‑functional placeholder) -->
+        <!--
+        <form class="w-full mt-4 space-y-4">
+          <input type="text" placeholder="Your Name"
+                 class="w-full px-4 py-2 bg-white/10 rounded-md placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-indigo-300"/>
+          <input type="email" placeholder="Your Email"
+                 class="w-full px-4 py-2 bg-white/10 rounded-md placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-indigo-300"/>
+          <textarea rows="4" placeholder="Message"
+                    class="w-full px-4 py-2 bg-white/10 rounded-md placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-indigo-300"></textarea>
+          <button type="submit"
+                  class="w-full py-2 bg-indigo-600 hover:bg-indigo-500 rounded-md text-white font-semibold transition-colors">
+            Send Message
+          </button>
+        </form>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-sm text-gray-400 bg-black/30 backdrop-blur-sm">
+    © 2026 Chirag Singhal | Designed by Chirag Singhal
+  </footer>
+
+</body>
+</html>
+```
